@@ -1,17 +1,40 @@
-# form_builder_app
+# Student Data App
 
-A new Flutter project.
+แอพ Flutter สำหรับจัดการข้อมูลนักศึกษา โดยใช้ package `flutter_form_builder` และ `form_builder_validators` เพื่อสร้างฟอร์มที่มีการตรวจสอบข้อมูล (validation) และบันทึกข้อมูลในรูปแบบ JSON ด้วย `shared_preferences` แอพนี้มีสามหน้า: หน้าแรก (เลือกกรอกหรือดูข้อมูล), หน้าฟอร์ม (กรอกข้อมูลนักศึกษา), และหน้ารายชื่อ (แสดงรายชื่อและรายละเอียดจาก JSON)
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Table of Contents
+- [คุณสมบัติ](#คุณสมบัติ)
+- [การติดตั้ง](#การติดตั้ง)
+- [การใช้งาน](#การใช้งาน)
+- [การเรียนรู้ Package](#การเรียนรู้-package)
+- [การแก้ไขปัญหา](#การแก้ไขปัญหา)
+- [ตัวอย่าง JSON](#ตัวอย่าง-json)
+- [License](#license)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## คุณสมบัติ
+- **หน้าแรก**: มีปุ่มสองปุ่มสำหรับไปยังหน้าฟอร์มหรือหน้ารายชื่อ
+- **หน้าฟอร์ม**:
+  - ใช้ทุกฟิลด์จาก `flutter_form_builder` (TextField, CheckboxGroup, Dropdown, RadioGroup, Slider, RangeSlider, Switch, DateTimePicker, DateRangePicker, Field สำหรับ chip)
+  - Validate ด้วย `form_builder_validators` (required, minLength, email, numeric, min, max, equalLength)
+  - ค่าเริ่มต้นเหมือนจริง (dummy data) เช่น ชื่อ "ชื่อ นามสกุลตัวอย่าง", อีเมล "student@example.com"
+  - บันทึกข้อมูลเป็น JSON array ใน `shared_preferences`
+  - Slider สีแดงตามคำขอ
+- **หน้ารายชื่อ**:
+  - ดึง JSON จาก `shared_preferences`
+  - แสดงรายชื่อนักศึกษาใน ListView
+  - แสดงรายละเอียดใน Dialog แบบตาราง key-value
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# FormBuilder
+---
+
+## การติดตั้ง
+1. **ติดตั้ง Flutter**:
+   - ดาวน์โหลด Flutter SDK จาก https://flutter.dev
+   - ตั้งค่า environment ตาม https://flutter.dev/docs/get-started/install
+2. **โคลน Repository**:
+   ```bash
+   git clone <repository-url>
+   cd student_app
