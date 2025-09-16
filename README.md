@@ -3,6 +3,16 @@
 แอพ Flutter สำหรับจัดการข้อมูลนักศึกษา โดยใช้ package `flutter_form_builder` และ `form_builder_validators` เพื่อสร้างฟอร์มที่มีการตรวจสอบข้อมูล (validation) และบันทึกข้อมูลในรูปแบบ JSON ด้วย `shared_preferences` แอพนี้มีสามหน้า: หน้าแรก (เลือกกรอกหรือดูข้อมูล), หน้าฟอร์ม (กรอกข้อมูลนักศึกษา), และหน้ารายชื่อ (แสดงรายชื่อและรายละเอียดจาก JSON)
 
 ---
+<p align="center">
+  <img src="screenshots/home.png" width="280" />
+  <img src="screenshots/form.png" width="280" />
+</p>
+
+<p align="center">
+  <img src="screenshots/details.png" width="280" />
+  <img src="screenshots/list.png" width="280" />
+  <img src="screenshots/validator.png" width="280" />
+</p>
 
 ## Table of Contents
 - [คุณสมบัติ](#คุณสมบัติ)
